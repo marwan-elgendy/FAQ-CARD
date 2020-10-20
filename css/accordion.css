@@ -1,0 +1,92 @@
+/**
+*
+* Testing
+*
+**/
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: #4a4b5e;
+  overflow: hidden;
+}
+
+.tab-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  background: transparent;
+  cursor: pointer;
+  /* Icon */
+}
+
+.tab-label:hover {
+  color: #f47c57;
+}
+
+.tab-label::after {
+  content: "";
+  background: url(/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 0.6em;
+  height: 0.5em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.tab-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+
+.tab-close:hover {
+  color: #f47c57;
+}
+
+input:checked + .tab-label {
+  font-weight: bold;
+  color: #1d1e35;
+}
+
+input:checked + .tab-label::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+/*# sourceMappingURL=accordion.css.map */
