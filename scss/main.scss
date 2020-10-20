@@ -16,19 +16,20 @@ body{
     overflow: hidden;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 100%;
+    @include media("screen", "<=tablet"){
+        height: 150vh;
+        overflow-y: auto;
+    }
     
 }
 .container{
-    @include media("screen", "<=tablet"){
-        overflow-y: auto;
-    }
+   
     .card{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 65vw;
         background-color: #ffffff;
-        // background:white url(/images/bg-pattern-desktop.svg) no-repeat -250px -170px fixed;
         height: 70vh;
         border-radius: 15px;
         box-shadow: 0px 22px 50px -15px hsl(238, 29%, 16%);
@@ -39,41 +40,16 @@ body{
         }
         @include media("screen", "<=tablet"){
             flex-direction: column;
+            margin-top: 200px;
         }
         @include media("screen", "<=phone"){
-            margin-top: 200px;
+            margin-top: 100px;
+            height: 110vh;
         }
         &__image{
             flex: 3;
             @include media("screen", "<=tablet"){
                 flex: 1;
-            }
-        }
-        &__image:after{
-            order: 0;
-            content: "";
-            background: url(/images/bg-pattern-desktop.svg) no-repeat -250px -170px fixed;
-            width: 100%;
-            max-width: 200%;
-            height: 100vh;
-            position: absolute;
-            background-repeat: no-repeat;
-            left: -8.5%;
-            top: -10%;
-            z-index: 1;
-            clip: rect(7vh, auto, auto, 5.5vw);
-            @include media("screen","<=desktop"){
-                background: url(/images/bg-pattern-desktop.svg) no-repeat -450px -200px fixed;
-                clip: rect(8vh, auto, auto, 6.5vw);
-            }
-            @include media("screen", "<=phone"){
-                background: url(/images/bg-pattern-mobile.svg) no-repeat;
-                width: 80%;
-                background-size: contain;
-                position: absolute;
-                left: 41px;
-                top: 3px;
-                clip: auto;
             }
         }
         &__image img{
@@ -87,16 +63,58 @@ body{
             z-index: 2;
             clip: rect(auto, auto, auto, 5.5vw);
             @include media("screen", "<=desktop"){
-                width: 60%;
-                left: -8.2%;
+                width: 56%;
+                left: -7.2%;
                 clip: rect(auto, auto, auto, 6.5vw);
+            }
+            @include media("screen", "<=tablet"){
+                width: 75%;
+                left: 8%;
+                top: -27vw;
+                clip: auto;
             }
             @include media("screen", "<=phone"){
                 width: 90%;
                 left: 0;
-                top: -19vh;
+                top: -31vw;
             }
 
+        }
+        &__image:after{
+            order: 0;
+            content: "";
+            background: url(/images/bg-pattern-desktop.svg) no-repeat -454px -238px;
+            width: 100%;
+            max-width: 200%;
+            height: 100vh;
+            position: absolute;
+            background-repeat: no-repeat;
+            left: -8.5%;
+            top: -10%;
+            z-index: 1;
+            clip: rect(7vh, auto, auto, 5.5vw);
+            @include media("screen","<=desktop"){
+                background: url(/images/bg-pattern-desktop.svg) no-repeat -450px -200px ;
+                clip: rect(8vh, auto, auto, 6.5vw);
+            }
+            @include media("screen", "<=tablet"){
+                background: url(/images/bg-pattern-mobile.svg) no-repeat;
+                width: 68%;
+                background-size: contain;
+                position: absolute;
+                left: 14%;
+                top: -2%;
+                clip: auto;
+            }
+            @include media("screen", "<=phone"){
+                background: url(/images/bg-pattern-mobile.svg) no-repeat;
+                width: 80%;
+                background-size: contain;
+                position: absolute;
+                left: 41px;
+                top: 3px;
+                clip: auto;
+            }
         }
         &__box img{
             width: 19%;
@@ -120,16 +138,13 @@ body{
             order: 1;
             flex: 3;
             z-index: 2;
-            @include media ("screen", "<=phone") {
-                text-align: center;
-                
-            }
             .data__header{
                 color: hsl(238, 29%, 16%);
                 font-size: 3vw;
                 margin-top: 7vh;
-                @include media("screen", "<=phone"){
-                    font-size: 5vh;
+                @include media("screen", "<=tablet"){
+                    font-size: 6vh;
+                    text-align: center;
                 }
             }
             
