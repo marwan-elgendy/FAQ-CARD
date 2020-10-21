@@ -18,9 +18,9 @@ My goal was to implement the given design and make it responsive.
 
 ## Technolgies used
 I did this project using:
-• HTML
-• SASS
-• CSS Flexbox
+* HTML
+* SASS
+* CSS Flexbox
 
 ## Contact Info:
 You can get in touch with me throw my [LinkedIn account](https://www.linkedin.com/in/marwan-elgendy9/) or my E-mail: marwanelgendy@gmail.com
